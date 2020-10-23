@@ -3,17 +3,29 @@ package br.com.teste.excel;
 import br.com.teste.excel.ExcelUtils;
 
 public class MassaDeDados {
-
-	public String getMarca() throws Exception {
-		String marca = ExcelUtils.getCellData(1, 0);
-		return marca;
+	
+	public String getEmailUserValido() throws Exception {
+		ExcelUtils.setExcelFile("./MassaDeDados.xlsx", "TesteComSucesso");
+		String user = ExcelUtils.getCellData(1, 0);
+		return user;
 	}
 
-	public String getModelo() throws Exception {
-		ExcelUtils.setExcelFile("./MassaDeDados.xlsx", "Teste");
+	public String getPasswordUserValido() throws Exception {
+		ExcelUtils.setExcelFile("./MassaDeDados.xlsx", "TesteComSucesso");
+		String password = ExcelUtils.getCellData(1, 1);
+		return password;
+	}
 
-		String modelo = ExcelUtils.getCellData(1, 1);
-		return modelo;
+	public String getEmailUserInvalido() throws Exception {
+		ExcelUtils.setExcelFile("./MassaDeDados.xlsx", "TesteComFalha");
+		String user = ExcelUtils.getCellData(1, 0);
+		return user;
+	}
+
+	public String getPasswordUserInvalido() throws Exception {
+		ExcelUtils.setExcelFile("./MassaDeDados.xlsx", "TesteFalha");
+		String password = ExcelUtils.getCellData(1, 1);
+		return password;
 	}
 
 }
