@@ -17,9 +17,9 @@ public class HomeLogic {
 
 	}
 
-	public void clicaVerOfertas() throws Exception {
-		action.waitElementToBeClickable(homePage.btnVerOfertas, 5);
-		action.click(homePage.btnVerOfertas);
+	public void clicaSignIn() throws Exception {
+		action.waitElementToBeClickable(homePage.btnSignIn, 5);
+		action.click(homePage.btnSignIn);
 	}
 
 }

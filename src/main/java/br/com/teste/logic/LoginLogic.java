@@ -4,24 +4,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import br.com.teste.driver.StoredActions;
-import br.comteste.pages.CadastroPage;
+import br.comteste.pages.LoginPage;
 
-public class CadastroPageLogic {
+public class LoginLogic {
 
-	private CadastroPage estoquePage;
+	private LoginPage cadastroPage;
 	private StoredActions action;
 
-	public CadastroPageLogic(WebDriver driver) {
-		estoquePage = PageFactory.initElements(driver, CadastroPage.class);
+	public LoginLogic(WebDriver driver) {
+		cadastroPage = PageFactory.initElements(driver, LoginPage.class);
 		action = new StoredActions(driver);
 
 	}
 
-	public void escreveBarraDePesquisa(String pesquisa) throws Exception {
-		action.waitElementToBeClickable(estoquePage.barraDePesquisa, 5);
-		action.insertText(estoquePage.barraDePesquisa, pesquisa);
-		action.waitElementToBeClickable(estoquePage.resultadoDaPesquisa, 5);
-		action.click(estoquePage.resultadoDaPesquisa);
+	public void insereEmail(String email) {
+		action.waitVisibilityOf(cadastroPage.campoEmail,5);
+		action.insertText(cadastroPage.campoEmail, email);
 	}
-
+	public void inserePassword(String password) {
+		action.waitVisibilityOf(cadastroPage.campoPassword,5);
+		action.insertText(cadastroPage.campoPassword, password);
+	}
+	public void clicaSignIn() {
+		action.waitVisibilityOf(cadastroPage.btnSignIn,5);
+		action.click(cadastroPage.btnSignIn);
+	}
 }
