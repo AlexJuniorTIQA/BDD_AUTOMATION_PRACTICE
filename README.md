@@ -1,9 +1,10 @@
 Projeto de BDD para avaliação
 
-Projeto desenvolvido em cima do site https://www.webmotors.com.br/
+Projeto desenvolvido em cima do site http://automationpractice.com/index.php
 
 Cenário de teste: 
-Pesquisar o produto Honda City. 
+ - Teste de Login Com Sucesso
+ - Teste de Login Com Falha
 
 
 
