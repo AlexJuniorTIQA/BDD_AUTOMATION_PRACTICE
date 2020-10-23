@@ -6,6 +6,6 @@ import org.openqa.selenium.support.How;
 
 public class HomePage {
 
-	@FindBy(how = How.XPATH, using = "//a[@class='Button Button--red-home'][contains(text(),'Ver Ofertas')]")
-	public WebElement btnVerOfertas;
+	@FindBy(how = How.XPATH, using = "//a[@title='Log in to your customer account']")
+	public WebElement btnSignIn;
 }
