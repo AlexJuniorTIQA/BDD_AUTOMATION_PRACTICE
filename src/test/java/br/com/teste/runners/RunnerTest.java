@@ -12,9 +12,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "./features", glue = { "br.com.webmotors.teste.steps" },
-		tags = {"@BuscaHomePage "},
-		plugin = { "pretty", "com.cucumber.listener.ExtentCucumberFormatter:report/reports.html" }, monochrome = true)
+@CucumberOptions(features = "./features", glue = { "br.com.teste.steps" },
+		tags = {"@LoginComSucesso,@LoginComFalha"},
+		plugin = { "pretty", "com.cucumber.listener.ExtentCucumberFormatter:report/report.html" }, monochrome = true)
 
 public class RunnerTest {
 	@AfterClass
